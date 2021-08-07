@@ -1,9 +1,10 @@
 const express = require('express');
 var cors = require('cors');
+require('dotenv').config();
 const routesNavigation = require('./src/routesNavigation');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(cors());
 app.use('/', routesNavigation);

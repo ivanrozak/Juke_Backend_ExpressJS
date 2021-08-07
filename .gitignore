@@ -1,3 +1,6 @@
 # dependencies
 /node_modules
 /tmpnodejsnpm-cache
+
+#environtent
+.env
