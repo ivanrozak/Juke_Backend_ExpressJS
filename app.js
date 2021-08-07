@@ -7,7 +7,10 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors());
-app.use('/', routesNavigation);
+// app.use('/', routesNavigation);
+app.use('/', function (req, res) {
+  res.send('Hello World');
+});
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!');
