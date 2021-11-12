@@ -3,7 +3,7 @@ const connection = require('../config/mysql');
 module.exports = {
   getDataModel: () => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM user', (error, result) => {
+      connection.query('SELECT * FROM users', (error, result) => {
         !error ? resolve(result) : reject(new Error(error));
       });
     });

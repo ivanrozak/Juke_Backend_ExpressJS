@@ -5,15 +5,16 @@ const {
   // getEventSearchModel,
 } = require('../model/getData');
 const helper = require('../helper/response');
-const qs = require('querystring');
+// const qs = require('querystring');
 
 module.exports = {
   getData: async (request, response) => {
     try {
       const result = await getDataModel();
-
+      // return response(result);
       return helper.response(response, 200, 'Success Get Event Data', result);
     } catch (error) {
+      // return response(error);
       return helper.response(response, 400, 'Bad Request', error);
     }
   },

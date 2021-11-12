@@ -23,7 +23,7 @@ const uploadLimit = multer({
   storage: storage,
   fileFilter,
   limits: { fileSize: 2 * 1024 * 1024 },
-}).single('image');
+}).single('ktpImage');
 
 const uploadFilter = (req, res, next) => {
   uploadLimit(req, res, function (err) {
